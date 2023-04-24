@@ -1,0 +1,9 @@
+.video {
+  background-color: #222222;
+}
+.video .video_title h3 {
+  color: #fff !important;
+}
+.video .video_title p {
+  color: #b7b7b7 !important;
+}

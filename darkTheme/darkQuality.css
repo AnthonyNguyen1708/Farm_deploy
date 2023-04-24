@@ -1,0 +1,15 @@
+.quality {
+  background-color: #222222;
+}
+.quality .container .quality_content .quality_left h3 {
+  color: #fff !important;
+}
+.quality .container .quality_content .quality_left .quality_footer .detail h4 {
+  color: #fff !important;
+}
+.quality .container .quality_under .quality_item a {
+  background-color: #222222 !important;
+}
+.quality .container .quality_under .quality_item a .detail h4 {
+  color: #fff !important;
+}

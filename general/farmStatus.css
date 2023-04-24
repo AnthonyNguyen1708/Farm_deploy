@@ -1,0 +1,28 @@
+.status .status_content .row .status_item {
+  text-align: center;
+}
+.status .status_content .row .status_item i {
+  display: block;
+  height: 80px;
+  width: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  background-color: #009f4d;
+  background: rgba(0, 159, 77, 0.04);
+  text-align: center;
+  margin: 0 auto;
+}
+.status .status_content .row .status_item i svg {
+  width: 35px;
+  height: 35px;
+  color: #009f4d;
+  fill: currentColor;
+}
+.status .status_content .row .status_item div {
+  color: black;
+  font-size: 50px;
+  font-weight: 600;
+}
+.status .status_content .row .status_item p {
+  font-size: 17px;
+}

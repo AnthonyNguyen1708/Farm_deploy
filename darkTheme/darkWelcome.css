@@ -1,0 +1,9 @@
+.welcome {
+  background-color: #222222;
+}
+.welcome .content_left h3 {
+  color: #fff !important;
+}
+.welcome .content_left p {
+  color: #b7b7b7 !important;
+}

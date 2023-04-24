@@ -1,0 +1,18 @@
+.banner .banner_content {
+  background-color: #222222;
+}
+.banner .banner_content .banner_text h2 {
+  color: black !important;
+}
+.banner .banner_content .banner_text .banner_detail h3 {
+  color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  .banner .banner_content .banner_left_content .banner_text {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .banner .banner_content .banner_left_content .banner_text h2 {
+    color: #fff !important;
+  }
+}

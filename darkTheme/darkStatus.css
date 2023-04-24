@@ -1,0 +1,7 @@
+.status {
+  background-color: #222222;
+}
+.status .status_item div,
+.status .status_item p {
+  color: #fff !important;
+}

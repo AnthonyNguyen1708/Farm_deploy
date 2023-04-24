@@ -1,0 +1,6 @@
+.service .service_content .card_body {
+  background-color: #222222 !important;
+}
+.service .service_content .card_body a {
+  color: #fff;
+}

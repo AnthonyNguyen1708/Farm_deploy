@@ -1,0 +1,10 @@
+.banner {
+  background-color: #222222;
+}
+.banner h4 {
+  color: #fff;
+}
+.banner .banner_path a,
+.banner .banner_path span {
+  color: #b7b7b7 !important;
+}

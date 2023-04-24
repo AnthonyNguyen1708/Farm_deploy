@@ -1,0 +1,450 @@
+<!DOCTYPE html >
+<html>   
+  <head>
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--BS 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!--GG Font-->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"/>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap"/>
+    <!--Slick-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Owlcarousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    <!--LigthGallery -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.1.3/css/lightgallery-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+    <!--Main CSS-->
+    <link rel="stylesheet" href="./css/index.css"/>
+    <title>Farmstead</title>
+  </head>
+  <body class="htmlBody" id="htmlBody" onload="changeNavMenu()">
+    <header id="site-header">
+      <div class="container"> 
+        <nav class="header_content d-flex justify-content-between">
+          <div class="header_logo"> 
+            <h1> <a>Farmstead </a>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5h88c8.8 0 16 7.2 16 16s-7.2 16-16 16H288 216s0 0 0 0c-16.6 0-32.7 1.9-48.2 5.4c-25.9 5.9-50 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440v16c0 13.3 10.7 24 24 24s24-10.7 24-24V440c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z"></path>
+              </svg>
+            </h1>
+          </div>
+          <div class="header_navbar"> 
+            <form class="header_input" id="header_input">
+              <div onclick="showHeaderInput()"> 
+                <svg class="searchIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                </svg>
+              </div>
+              <input id="search_input" type="text"/>
+            </form>
+            <svg class="moonIcon" id="moonIcon" onclick="changeTheme()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M279.135 512c78.756 0 150.982-35.804 198.844-94.775 28.27-34.831-2.558-85.722-46.249-77.401-82.348 15.683-158.272-47.268-158.272-130.792 0-48.424 26.06-92.292 67.434-115.836 38.745-22.05 28.999-80.788-15.022-88.919A257.936 257.936 0 0 0 279.135 0c-141.36 0-256 114.575-256 256 0 141.36 114.576 256 256 256zm0-464c12.985 0 25.689 1.201 38.016 3.478-54.76 31.163-91.693 90.042-91.693 157.554 0 113.848 103.641 199.2 215.252 177.944C402.574 433.964 344.366 464 279.135 464c-114.875 0-208-93.125-208-208s93.125-208 208-208z"></path>
+            </svg>
+            <svg class="sunIcon d-none" id="sunIcon" onclick="changeTheme()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd" d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8Zm0 2a6 6 0 1 0 0-12a6 6 0 0 0 0 12ZM11 0h2v4.062a8.079 8.079 0 0 0-2 0V0ZM7.094 5.68L4.222 2.808L2.808 4.222L5.68 7.094A8.048 8.048 0 0 1 7.094 5.68ZM4.062 11H0v2h4.062a8.079 8.079 0 0 1 0-2Zm1.618 5.906l-2.872 2.872l1.414 1.414l2.872-2.872a8.048 8.048 0 0 1-1.414-1.414ZM11 19.938V24h2v-4.062a8.069 8.069 0 0 1-2 0Zm5.906-1.618l2.872 2.872l1.414-1.414l-2.872-2.872a8.048 8.048 0 0 1-1.414 1.414ZM19.938 13H24v-2h-4.062a8.069 8.069 0 0 1 0 2ZM18.32 7.094l2.872-2.872l-1.414-1.414l-2.872 2.872c.528.41 1.003.886 1.414 1.414Z" clip-rule="evenodd"></path>
+            </svg>
+            <svg class="barsIcon" id="barsIcon" onclick="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path class="barsIconPath" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path>
+            </svg>
+          </div>
+          <div class="header_dropDown" id="myDropdown">
+            <ul class="header_menu shadow-sm">
+              <li class="menu_item"><a id="nav_home" href="/index.html">Home </a></li>
+              <li class="menu_item"> <a id="nav_about" href="/about.html">About </a></li>
+              <li class="menu_item"> <a id="nav_service" href="/service.html">Service </a></li>
+              <li class="menu_item"> <a id="nav_blog" href="">Blog Pots </a></li>
+              <li class="menu_item"> <a id="nav_landing" href="/landingPage.html">landing page </a></li>
+              <li class="menu_item"> <a id="nav_element" href="">element page </a></li>
+              <li class="menu_item"> <a id="nav_404" href="">404 page </a></li>
+              <li class="menu_item"> <a id="nav_contact" href="">contact </a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <div class="banner" id="banner">
+      <div class="container-fluid"> 
+        <div class="banner_content">
+          <div class="col-md-5">
+            <div class="banner_left_content"> 
+              <div class="banner_text"> 
+                <h2>Farm </h2>
+                <div class="banner_detail">
+                  <h3>
+                     Welcome to Farmstead <br/>where Natural Food is born!</h3>
+                  <p>
+                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                  <button class="btn_style">Learn More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="banner_right_content">
+              <div class="banner_slide slickBtn">
+                <div class="banner_item">   <img class="banner_img" src="./images/banner/banner1.jpeg" alt=""/></div>
+                <div class="banner_item"> <img class="banner_img" src="./images/banner/banner2.jpeg" alt=""/></div>
+                <div class="banner_item"><img class="banner_img" src="./images/banner/banner3.jpeg" alt=""/></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="feature py-lg-5 py-sm-3">
+      <div class="container"> 
+        <div class="row">
+          <div class="feature_left col-lg-6"> 
+            <h5> Grow Naturally</h5>
+            <h3>Leaders in the field</h3>
+            <p>
+               Aurabitur id gravida risus. Fusce eget ex fermentum, ultricies nisi ac sed, lacinia est. Quisque ut lectus consequat, venenatis eros et, sed commodo risus. Nullam sit amet laoreet elit. Suspendisse non init magnaa velit efficitur, dolor eget ex ermentum.    </p>
+            <button class="btn btn_style mt-lg-5 my-sm-3">DISCOVER MORE  </button>
+          </div>
+          <div class="feature_right col-lg-6"> 
+            <div class="content d-grid"> 
+              <div class="feature_item grids-1">
+                <div class="icon"><img class="img-fluid" src="./images/icons/trees.png"/></div>
+                <h4> <a href="">Natural Products</a></h4>
+              </div>
+              <div class="feature_item grids-1">
+                <div class="icon"><img class="img-fluid" src="./images/icons/cart.png"/></div>
+                <h4> <a href="">Wheat Cultivation</a></h4>
+              </div>
+              <div class="feature_item grids-1">
+                <div class="icon"><img class="img-fluid" src="./images/icons/truck.png"/></div>
+                <h4> <a href="">Mordern Truck</a></h4>
+              </div>
+              <div class="feature_item grids-1">
+                <div class="icon"><img class="img-fluid" src="./images/icons/tree.png"/></div>
+                <h4> <a href="">Organic Products</a></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="service py-lg-5">
+      <div class="container py-md-2 py-4">
+        <div class="service_title mb-lg-5">
+          <div class="row"> 
+            <div class="col-md-6 col-sm-12"> 
+              <h5>What we do </h5>
+              <h3>why Choose Our Fresh Organic Food </h3>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <p>
+                 Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque, eaque ipsa quae ab illo inventore.Sed ut perspiciatis unde omnis iste natus error sit.</p>
+            </div>
+          </div>
+          <h4>Services</h4>
+        </div>
+        <div class="service_content row justify-content-center">
+          <div class="service_item col-lg-4 col-md-6 mt-sm-4"> 
+            <div class="card">
+              <div class="card_header"><a href="">   <img class="w-100" src="./images/service/service1.jpg" alt=""/></a></div>
+              <div class="card_body"> 
+                <div class="label_style">Natural </div><a href="">Agriculture Products</a>
+                <p>
+                   Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque laudantium, totam rem aperiam|</p>
+              </div>
+            </div>
+          </div>
+          <div class="service_item col-lg-4 col-md-6 mt-sm-4">
+            <div class="card">
+              <div class="card_header"><a href="">   <img class="w-100" src="./images/service/service2.jpg" alt=""/></a></div>
+              <div class="card_body"> 
+                <div class="label_style">Agriculture </div><a href="">Fresh Vegetables</a>
+                <p>
+                   Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque laudantium, totam rem aperiam|</p>
+              </div>
+            </div>
+          </div>
+          <div class="service_item col-lg-4 col-md-6 mt-0 mt-md-4">
+            <div class="card">
+              <div class="card_header"><a href="">   <img class="w-100" src="./images/service/service3.jpg" alt=""/></a></div>
+              <div class="card_body"> 
+                <div class="label_style">Farm</div><a href="">Organic Products</a>
+                <p>
+                   Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque laudantium, totam rem aperiam|</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="quality py-lg-5 py-3">
+      <div class="container py-md-3">
+        <div class="quality_content"> 
+          <div class="quality_left"> 
+            <h5>Why choose us </h5>
+            <h3>Quality food is the most important thing in our life</h3>
+            <p>
+               Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae, fugiat.</p>
+            <div class="row mt-sm-5 mt-4 pt-lg-4">
+              <div class="col-sm-6 quality_footer d-flex"><span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                    <path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"></path>
+                  </svg></span>
+                <div class="detail ml-2"> 
+                  <h4>Qualified Staff</h4>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                </div>
+              </div>
+              <div class="col-sm-6 quality_footer d-flex"><span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M367.2 412.5C335.9 434.9 297.5 448 256 448s-79.9-13.1-111.2-35.5l58-58c15.8 8.6 34 13.5 53.3 13.5s37.4-4.9 53.3-13.5l58 58zm90.7 .8c33.8-43.4 54-98 54-157.3s-20.2-113.9-54-157.3c9-12.5 7.9-30.1-3.4-41.3S425.8 45 413.3 54C369.9 20.2 315.3 0 256 0S142.1 20.2 98.7 54c-12.5-9-30.1-7.9-41.3 3.4S45 86.2 54 98.7C20.2 142.1 0 196.7 0 256s20.2 113.9 54 157.3c-9 12.5-7.9 30.1 3.4 41.3S86.2 467 98.7 458c43.4 33.8 98 54 157.3 54s113.9-20.2 157.3-54c12.5 9 30.1 7.9 41.3-3.4s12.4-28.8 3.4-41.3zm-45.5-46.1l-58-58c8.6-15.8 13.5-34 13.5-53.3s-4.9-37.4-13.5-53.3l58-58C434.9 176.1 448 214.5 448 256s-13.1 79.9-35.5 111.2zM367.2 99.5l-58 58c-15.8-8.6-34-13.5-53.3-13.5s-37.4 4.9-53.3 13.5l-58-58C176.1 77.1 214.5 64 256 64s79.9 13.1 111.2 35.5zM157.5 309.3l-58 58C77.1 335.9 64 297.5 64 256s13.1-79.9 35.5-111.2l58 58c-8.6 15.8-13.5 34-13.5 53.3s4.9 37.4 13.5 53.3zM208 256a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"></path>
+                  </svg></span>
+                <div class="detail ml-2"> 
+                  <h4>Excellent Service</h4>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="quality_right"> <img class="img-fluid" src="./images/quality/quality.jpeg" alt=""/>
+            <div class="img_detail"> 
+              <h6>36+</h6>
+              <p>YEARS OF EXPERIENCE</p>
+            </div>
+          </div>
+        </div>
+        <div class="quality_under">
+          <div class="row justify-content-center">
+            <div class="quality_item col-lg-4 col-md-6"><a href="">
+                <div class="col-3">
+                  <div class="icon"><img class="img-fluid" src="./images/quality/quality1.png"/></div>
+                </div>
+                <div class="col-9">
+                  <div class="detail">
+                    <h4>Agriculture</h4>
+                    <p>Ras effic itur metusga via suscipit consectetur adipisicing unde omnis.</p>
+                  </div>
+                </div></a></div>
+            <div class="quality_item col-lg-4 col-md-6"><a href="">
+                <div class="col-3">
+                  <div class="icon"><img class="img-fluid" src="./images/quality/quality2.png"/></div>
+                </div>
+                <div class="col-9">
+                  <div class="detail">
+                    <h4>Fresh</h4>
+                    <p>Ras effic itur metusga via suscipit consectetur adipisicing unde omnis.           </p>
+                  </div>
+                </div></a></div>
+            <div class="quality_item col-lg-4 col-md-6"><a href="">
+                <div class="col-3">
+                  <div class="icon"><img class="img-fluid" src="./images/quality/quality3.png"/></div>
+                </div>
+                <div class="col-9">
+                  <div class="detail">
+                    <h4>Natural</h4>
+                    <p>Ras effic itur metusga via suscipit consectetur adipisicing unde omnis.</p>
+                  </div>
+                </div></a></div>
+            <div class="quality_item col-lg-4 col-md-6"><a href="">
+                <div class="col-3">
+                  <div class="icon"><img class="img-fluid" src="./images/quality/quality4.png"/></div>
+                </div>
+                <div class="col-9">
+                  <div class="detail">
+                    <h4>Farm</h4>
+                    <p>Ras effic itur metusga via suscipit consectetur adipisicing unde omnis.</p>
+                  </div>
+                </div></a></div>
+            <div class="quality_item col-lg-4 col-md-6"><a href="">
+                <div class="col-3">
+                  <div class="icon"><img class="img-fluid" src="./images/quality/quality5.png"/></div>
+                </div>
+                <div class="col-9">
+                  <div class="detail">
+                    <h4>Organic</h4>
+                    <p>Ras effic itur metusga via suscipit consectetur adipisicing unde omnis.</p>
+                  </div>
+                </div></a></div>
+            <div class="quality_item col-lg-4 col-md-6"><a href="">
+                <div class="col-3">
+                  <div class="icon"><img class="img-fluid" src="./images/quality/quality6.png"/></div>
+                </div>
+                <div class="col-9">
+                  <div class="detail">
+                    <h4>Dairy</h4>
+                    <p>Ras effic itur metusga via suscipit consectetur adipisicing unde omnis.</p>
+                  </div>
+                </div></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="gallery py-lg-5">
+      <div class="container py-md-4">
+        <div class="row gallery_content" id="animated-thumbnails">
+          <div class="col-lg-3 col-6 gallery_detail"> 
+            <div class="gallery_effect mt-sm-2">
+              <h5>Gallery </h5>
+              <h3>Our Products </h3>
+              <p>Lorem ipsum viverra feugiat. Pellen tesque libero ut justo.</p>
+              <button class="btn btn_style">DISCOVER MORE</button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6 gallery_img">
+            <div class="gallery_effect"><a class="lightimg" data-exthumbimage="./images/gallery/gallery1.jpeg" data-src="./images/gallery/gallery1.jpeg">
+                <figure> <img class="img-fluid" src="./images/gallery/gallery1.jpeg" alt=""/>
+                  <h5 class="gallery_text">Fresh Carrots</h5>
+                </figure></a></div>
+          </div>
+          <div class="col-lg-3 col-6 gallery_img">
+            <div class="gallery_effect"><a class="lightimg" data-exthumbimage="./images/gallery/gallery2.jpeg" data-src="./images/gallery/gallery2.jpeg">
+                <figure> <img class="img-fluid" src="./images/gallery/gallery2.jpeg" alt=""/>
+                  <h5 class="gallery_text">Strawberry </h5>
+                </figure></a></div>
+          </div>
+          <div class="col-lg-3 col-6 gallery_img">
+            <div class="gallery_effect"><a class="lightimg" data-exthumbimage="./images/gallery/gallery3.jpeg" data-src="./images/gallery/gallery3.jpeg"> 
+                <figure> <img class="img-fluid" src="./images/gallery/gallery3.jpeg" alt=""/>
+                  <h5 class="gallery_text">Our Farm</h5>
+                </figure></a></div>
+          </div>
+          <div class="col-lg-3 col-6 gallery_img">
+            <div class="gallery_effect"><a class="lightimg" data-exthumbimage="./images/gallery/gallery4.jpeg" data-src="./images/gallery/gallery4.jpeg">
+                <figure> <img class="img-fluid" src="./images/gallery/gallery4.jpeg" alt=""/>
+                  <h5 class="gallery_text">Fresh Apples</h5>
+                </figure></a></div>
+          </div>
+          <div class="col-lg-3 col-6 gallery_img">
+            <div class="gallery_effect"><a class="lightimg" data-exthumbimage="./images/gallery/gallery5.jpeg" data-src="./images/gallery/gallery5.jpeg">
+                <figure> <img class="img-fluid" src="./images/gallery/gallery5.jpeg" alt=""/>
+                  <h5 class="gallery_text">Awesome Fields</h5>
+                </figure></a></div>
+          </div>
+          <div class="col-lg-3 col-6 gallery_img">
+            <div class="gallery_effect"><a class="lightimg" data-exthumbimage="./images/gallery/gallery6.jpeg" data-src="./images/gallery/gallery6.jpeg">
+                <figure> <img class="img-fluid" src="./images/gallery/gallery6.jpeg" alt=""/>
+                  <h5 class="gallery_text">Fresh Grapes </h5>
+                </figure></a></div>
+          </div>
+          <div class="col-lg-3 col-6 gallery_img">
+            <div class="gallery_effect"><a class="lightimg" data-exthumbimage="./images/gallery/gallery7.jpeg" data-src="./images/gallery/gallery7.jpeg">
+                <figure> <img class="img-fluid" src="./images/gallery/gallery7.jpeg" alt=""/>
+                  <h5 class="gallery_text">Hot Pepper</h5>
+                </figure></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="client py-lg-5"> 
+      <div class="client_content py-lg-5"> 
+        <div class="container py-md-5 py-4">
+          <div class="client_slider slickBtn">
+            <div class="client_item row">
+              <div class="client_left col-md-3"><a href=""><img class="img-fluid" src="./images/client/client1.jpeg" alt=""/></a>
+                <div class="client_title"> 
+                  <h3>Dennis Wilson    </h3>
+                  <p>Customer</p>
+                </div>
+              </div>
+              <div class="client_right col-md-9 mt-md-0 mt-lg-4 text-md-left"><span class="fa fa-quote-left"></span>
+                <p class="client_text">"Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae laudantium Quas minima sunt natus tempore, maiores aliquid modi felis sequi optio lacinia id ipsum non velit, culpa. voluptate rem ullam dolore nisi est quasi, doloribus tempora. est elit. Non quae, fugiat ad libero justo sed amet."</p>
+              </div>
+            </div>
+            <div class="client_item row">
+              <div class="client_left col-md-3"><a href=""><img class="img-fluid" src="./images/client/client2.jpeg" alt=""/></a>
+                <div class="client_title"> 
+                  <h3>Dennis Wilson    </h3>
+                  <p>Customer</p>
+                </div>
+              </div>
+              <div class="client_right col-md-9 pl-lg-5 mt-md-0 mt-lg-4 text-md-left"><span class="fa fa-quote-left"></span>
+                <p class="client_text">"Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae laudantium Quas minima sunt natus tempore, maiores aliquid modi felis sequi optio lacinia id ipsum non velit, culpa. voluptate rem ullam dolore nisi est quasi, doloribus tempora. est elit. Non quae, fugiat ad libero justo sed amet."</p>
+              </div>
+            </div>
+            <div class="client_item row">
+              <div class="client_left col-md-3"><a href=""><img class="img-fluid" src="./images/client/client3.jpeg" alt=""/></a>
+                <div class="client_title"> 
+                  <h3>Dennis Wilson    </h3>
+                  <p>Customer</p>
+                </div>
+              </div>
+              <div class="client_right col-md-9 pl-lg-5 mt-md-0 mt-lg-4 text-md-left"><span class="fa fa-quote-left"></span>
+                <p class="client_text">"Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae laudantium Quas minima sunt natus tempore, maiores aliquid modi felis sequi optio lacinia id ipsum non velit, culpa. voluptate rem ullam dolore nisi est quasi, doloribus tempora. est elit. Non quae, fugiat ad libero justo sed amet."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="py-lg-5"> 
+      <div class="container py-4"> 
+        <div class="row"> 
+          <div class="footer_mid col-lg-4 order-lg-1 order-3 mt-lg-0 mt-md-5">
+            <div class="footer_logo">   
+              <h4> <a href="">Farmstead    <i class="fa fa-leaf"></i></a></h4>
+            </div>
+            <p class="mt-lg-4">
+               Duis imperdiet sapien tortor, vitae congue diam auctor vitae. Aliquam eget turpis ornare, euismod ligul aeget, enenatis dui.</p>
+            <p class="mt-lg-5">
+               © 2022 Farmstead. All Rights Reserved | WordPress Theme by<a href="">W3Layouts.</a></p>
+          </div>
+          <div class="footer_left col-lg-4 col-md-6 pl-lg-5">
+            <h3>Find Us </h3>
+            <div> 
+              <p class="mt-lg-3">Address: 10001 Alleghany st, 5th Avenue, 235 Terry, London.</p>
+              <p class="mt-lg-3">Phone: <a href="tel:+12 23456790">+12 23456790</a></p>
+              <p class="mt-lg-3">Email: <a href="mailto:info@example.com">info@example.com</a></p>
+              <p class="mt-lg-3">Fax: <a href="tel:+11 367 21890">+ 11 367 21890</a></p>
+            </div>
+          </div>
+          <div class="footer_right col-lg-4 col-md-6 order-lg-3">
+            <h3>Newsletter</h3>
+            <div>    
+              <p>Subscribe to our mailing list and get updates to your email inbox.</p>
+              <form class="d-flex mt-3">
+                <input type="text" placeholder="Email Address"/>
+                <button> <span class="fa fa-paper-plane"></span></button>
+              </form>
+            </div>
+            <ul class="social mt-4 pt-2"> 
+              <li> <a href=""><i class="fab fa-facebook-f"></i></a></li>
+              <li> <a href=""><i class="fab fa-linkedin-in"></i></a></li>
+              <li> <a href=""><i class="fab fa-twitter"></i></a></li>
+              <li> <a href=""><i class="fab fa-google-plus-g"></i></a></li>
+              <li> <a href=""><i class="fab fa-github"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <button class="backToTopBtn" id="backToTopBtn" onclick="scrollToTop()"> <i class="fa fa-level-up"></i></button>
+    
+  </body>
+  <!--jQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!--BS 5-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <!--Owlcarousel-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"> </script>
+  <!--Slick-->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!--Light Gallery-->
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.1.3/lightgallery.umd.min.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.1.3/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+  <!--Counting Up-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+  <!--Main JS-->
+  <script src="./js/index.js"></script>
+</html>

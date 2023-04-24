@@ -1,0 +1,54 @@
+.video .video_content {
+  max-width: 950px;
+  margin: 0 auto;
+}
+.video .video_content .video_title {
+  text-align: center;
+}
+.video .video_content .video_title h3 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.video .video_content .video_title p {
+  color: #707070;
+  font-size: 17px;
+}
+.video .video_content .video_img {
+  position: relative;
+}
+.video .video_content .video_img img {
+  max-width: 100%;
+  border-radius: 8px;
+  width: 100%;
+}
+.video .video_content .video_img button {
+  position: absolute;
+  left: 47%;
+  bottom: 47%;
+  background-color: #fff;
+  padding: 18px;
+  border-radius: 50%;
+  border: none;
+}
+.video .video_content .video_img button svg {
+  width: 24px;
+  height: 24px;
+  color: #fb811e;
+  fill: currentColor;
+}
+.video .video_content .video_img .modal {
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+}
+.video .video_content .video_img .modal .modal-dialog {
+  max-width: 850px;
+}
+.video .video_content .video_img .modal .modal-dialog .modal-content {
+  margin-top: 23%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.video .video_content .video_img .modal .modal-dialog .modal-content iframe {
+  width: 100%;
+  height: 450px;
+}

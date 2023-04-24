@@ -1,0 +1,23 @@
+.banner {
+  background-image: url("../images/banner/mini-banner.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+.banner .banner_content {
+  margin-left: 10%;
+}
+.banner .banner_content .container {
+  max-width: 1200px;
+}
+.banner .banner_content .container h4 {
+  font-weight: 700;
+}
+.banner .banner_content .container .banner_path a {
+  text-decoration: none;
+  color: #707070;
+  font-weight: bold;
+}
+.banner .banner_content .container .banner_path span {
+  color: #707070;
+}

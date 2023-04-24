@@ -1,0 +1,12 @@
+.feature {
+  background-color: #222222;
+}
+.feature .feature_left h3 {
+  color: #fff;
+}
+.feature .feature_right .feature_item {
+  background-color: #222222 !important;
+}
+.feature .feature_right .feature_item h4 a {
+  color: #fff !important;
+}
